@@ -181,6 +181,12 @@ ta_dare = (
     "உங்கள் கிரஷின் படத்தை உங்கள் டிபியாக அமைக்கவும்.",
     "எனக்கு அதிக தைரியத்தை பரிந்துரைக்கவும்.")
 
+DARE_STRING = """ ~~ ** Hey! {} ~~**
+{} give you a Dare! ~ 😳
+~~**Here the truth**~~: **{}** 😈
+~~ **Now do the dare!** ~~ **{}**! 😰
+"""
+
 @bot.on_message(filters.command("dare"))            
 def dare(_, m):
        reply = m.reply_to_message
@@ -201,25 +207,25 @@ def dare(_, m):
        name2 = m.from_user.first_name
        if reply:
            if text.endswith("bn"):
-               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Bengali,name2))
+               await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,Bengali,name2))
                return
            if text.endswith("de"):
-               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,German,name2))
+               await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,German,name2))
                return
            if text.endswith("es"):
-               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Spanish,name2))
+               await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,Spanish,name2))
                return
            if text.endswith("fr"):
-               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,French,name2))
+               await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,French,name2))
                return
            if text.endswith("hi"):
-               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Hindi,name2))
+               await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,Hindi,name2))
                return
            if text.endswith("tl"):
-               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Tagalog,name2))
+               await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,Tagalog,name2))
                return 
            if text.endswith("ta"):
-               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Tamil,name2))
+               await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,Tamil,name2))
                
  
 CLOSE = [[InlineKeyboardButton("Close Message!", callback_data="close")]]
