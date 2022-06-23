@@ -41,7 +41,7 @@ Example:
 
 | <a href="https://github.com/Ctzfamily" target="_blank">**Nandha**</a> | <a href="https://api.truthordarebot.xyz" target="_blank">**@TruthOrDarsBot**</a> | 
 | :---: |:---:|
-| [![lol](https://avatars.githubusercontent.com/u/89440790?v=4)](https://avatars.githubusercontent.com/u/71401053?s=200&v=4)    | [![Waifu](content://com.android.chrome.FileProvider/images/screenshot/16560124373311679098332.jpg![image](https://user-images.githubusercontent.com/89440790/175381456-202b744d-128a-4a9c-9314-f79e4a54f24b.png)
+| [![lol](https://avatars.githubusercontent.com/u/89440790?v=4)](https://avatars.githubusercontent.com/u/71401053?s=200&v=4)    | [![Waifu](http://telegra.ph/file/bf6248e4b0c4a7da65315.jpg![image](https://user-images.githubusercontent.com/89440790/175381456-202b744d-128a-4a9c-9314-f79e4a54f24b.png)
 )](https://api.truthordarebot.xyz) |
 | <a href="https://github.com/Ctzfamily/TruthOrDareBot/commits?author=Ctzfamily" target="_blank">`All Code Of This Bot Is Written By Me ^_^`</a> | <a href="https://api.truthordarebot.xyz" target="_blank">`Base Idea Of Making This Bot`</a>
 
