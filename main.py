@@ -63,8 +63,6 @@ CODES = """ **The list of available truth or dare translation codes!**\n
 @bot.on_message(filters.command("truth"))
 async def truth(_, m):
        reply = m.reply_to_message
-       name1 = reply.from_user.first_name
-       name2 = m.from_user.first_name
        API = requests.get("https://api.truthordarebot.xyz/v1/truth").json()
        Bengali = API["translations"]["bn"]
        German = API["translations"]["de"]
@@ -73,10 +71,12 @@ async def truth(_, m):
        Hindi = API["translations"]["hi"]
        Tagalog = API["translations"]["tl"]
        if len(m.command) < 2:
-             await m.reply_text("baka! read the langs codes!😑",
+             await m.reply_photo(IMAGE,caption="baka! read the langs codes!😑",
              reply_markup=InlineKeyboardMarkup(LANG_CODE))
              return
        text = m.text.split(None, 1)[1]
+       name1 = reply.from_user.first_name
+       name2 = m.from_user.first_name
        if reply:
            if text.endswith("bn"):
                await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Bengali,name2))
