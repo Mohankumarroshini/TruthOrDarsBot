@@ -40,7 +40,51 @@ async def start(_, m):
        url = "http://telegra.ph/file/c50b1959b61acf73f0a57.jpg"
        await m.reply_photo(photo=url,caption=PM_START_TEXT.format(m.from_user.mention),
              reply_markup=InlineKeyboardMarkup(buttons))
+    
+LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="")]]
+    
+    
+TRUTH_STRING = """ ~~ ** Hey! {} ~~**
+{} give you a Truth! ~ 😳
+~~ **Here the truth:~~ ** **{}** 😈
+~~ **Now tell the truth to** ~~: **{}**! 😰
+"""
 
+
+@bot.on_message(filters.command("truth"))
+async def truth(_, m):
+       reply = m.reply_to_message
+       name1 = reply.from_user.first_name
+       name2 = m.from_user.first_name
+       API = requests.get("https://api.truthordarebot.xyz/v1/truth").json()
+       Bengali = API["translations"]["bn"]
+       German = API["translations"]["de"]
+       Spanish = API["translations"]["es"]
+       French = API["translations"]["fr"]
+       Hindi = API["translations"]["hi"]
+       Tagalog = API["translations"]["tl"]
+       Indonesian = API["translations"]["id"]
+       if len(m.command) < 2:
+             await m.reply_text("baka! read the langs codes!😑",
+             reply_markup=InlineKeyboardMarkup(LANG_CODE))
+             return
+        text = m.text.split(None, 1)[1]
+        if reply:
+           if text.endswith("bn"):
+               await m.reply_text(TRUTH_STRING.format(name1,name2,Bengali,name2)
+               return
+           if text.endswith("de"):
+               await m.reply_text(TRUTH_STRING.format(name1,name2,German,name2)
+               return
+           if text.endswith("es"):
+               await m.reply_text(TRUTH_STRING.format(name1,name2,Spanish,name2)
+               
+                                  
+                                  
+                                  
+                                  
+                                  
+                                  
 bot.run()
 with bot:
          bot.send_message(f"@{SUPPORT}", f"Hello there I'm Online!\nPyroVersion: {pyro}")
