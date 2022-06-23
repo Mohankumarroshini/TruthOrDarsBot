@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://telegra.ph/file/1ee51bc225382ffac5f61.jpg" alt="NekoBestBot">
+  <img src="http://telegra.ph/file/d7c0a42db5cbf08dbf3fa.jpg" alt="Truthordare">
 </p>
 <h1 align="center">
-  ╔═━「<b><a href="https://bit.ly/3y6vMCC">@NekoBestBot </a></b>」
+  ╔═━「<b><a href="https://">@NekoBestBot </a></b>」
 </h1>
 
 ## Deploy
