@@ -58,6 +58,13 @@ CODES = """ **The list of available truth or dare translation codes!**\n
 **French**: `fr`
 **Hindi**: `hi`
 **Tagalog**: `tl`
+**Tamil**: `ta`
+
+Example: 
+- /truth ta: reply to someone!
+- /dare ta: reply to someone!
+
+[SUPPORT](t.me/nandhaSupport) | [UPDATES](t.me/nandhabots)
 """
 ta = ("நீங்கள் யாரையாவது பேசுபவரா? "
      "உங்கள் பெற்றோர்கள் 'அதை' செய்வதை நீங்கள் எப்போதாவது நடந்திருக்கிறீர்களா?",
@@ -77,7 +84,7 @@ ta = ("நீங்கள் யாரையாவது பேசுபவர�
     "நீங்கள் எப்போதாவது ஒரு காதலியை ஆன்லைனில் பதிவு செய்ய முயற்சித்தீர்களா?",
     "ஒரு பெண்ணை வாடகைக்குப் பார்த்த பிறகு, உங்களுக்கும் ஆன்லைனில் ஜிஎஃப் புக்கிங்கில் ஆர்வம் இருக்கிறதா?",
     "போட்டியில் பங்கேற்க உங்கள் வயது குறித்து நீங்கள் எப்போதாவது பொய் சொல்லியிருக்கிறீர்களா?" ,
-    "நீங்கள் எப்போதாவது யாரையாவது சோதனை செய்து பிடிபட்டீர்களா?" ]
+    "நீங்கள் எப்போதாவது யாரையாவது சோதனை செய்து பிடிபட்டீர்களா?")
          
 @bot.on_message(filters.command("truth"))
 async def truth(_, m):
@@ -89,6 +96,7 @@ async def truth(_, m):
        French = API["translations"]["fr"]
        Hindi = API["translations"]["hi"]
        Tagalog = API["translations"]["tl"]
+       Tamil = random.choice(ta)
        if len(m.command) < 2:
              await m.reply_photo(IMAGE,caption="baka! read the langs codes!😑",
              reply_markup=InlineKeyboardMarkup(LANG_CODE))
@@ -114,13 +122,20 @@ async def truth(_, m):
                return
            if text.endswith("tl"):
                await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Tagalog,name2))
+               return 
+           if text.endswith("ta"):
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Tamil,name2))
                
 
                                   
-@bot.on_callback_query(filters.regex("lang_codes"))
-async def langs(_, query: CallbackQuery):
+@bot.on_callback_query(filters.regex("help_back"))
+async def helpback(_, query: CallbackQuery):
         await query.message.edit_caption(CODES)
-                                  
+        
+@bot.on_callback_query(filters.regex("close"))
+async def close(_, query: CallbackQuery):
+        await query.message.delete()
+
                                   
                                   
                                   
