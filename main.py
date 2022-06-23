@@ -63,7 +63,6 @@ async def truth(_, m):
        French = API["translations"]["fr"]
        Hindi = API["translations"]["hi"]
        Tagalog = API["translations"]["tl"]
-       Indonesian = API["translations"]["id"]
        if len(m.command) < 2:
              await m.reply_text("baka! read the langs codes!😑",
              reply_markup=InlineKeyboardMarkup(LANG_CODE))
