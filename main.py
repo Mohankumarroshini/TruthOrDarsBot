@@ -188,7 +188,7 @@ DARE_STRING = """ ~~ ** Hey! {} ~~**
 """
 
 @bot.on_message(filters.command("dare"))            
-def dare(_, m):
+async def dare(_, m):
        reply = m.reply_to_message
        API = requests.get("https://api.truthordarebot.xyz/v1/dare").json()
        Bengali = API["translations"]["bn"]
@@ -199,9 +199,9 @@ def dare(_, m):
        Tagalog = API["translations"]["tl"]
        Tamil = random.choice(ta_dare)
        if len(m.command) < 2:
-          await m.reply_photo(IMAGE,caption="baka! read the langs codes!😑",
-          reply_markup=InlineKeyboardMarkup(LANG_CODE))
-          return
+           await m.reply_photo(IMAGE,caption="baka! read the langs codes!😑",
+           reply_markup=InlineKeyboardMarkup(LANG_CODE))
+           return
        text = m.text.split(None, 1)[1]
        name1 = reply.from_user.first_name
        name2 = m.from_user.first_name
