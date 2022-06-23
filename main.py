@@ -99,7 +99,7 @@ async def truth(_, m):
 
                                   
 @bot.on_callback_query(filters.regex("lang_codes"))
-async def langs(_, query: Callback_Query):
+async def langs(_, query: CallbackQuery):
         await query.message.edit_caption(CODES)
                                   
                                   
