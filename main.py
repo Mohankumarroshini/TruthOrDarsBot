@@ -68,8 +68,8 @@ async def truth(_, m):
              await m.reply_text("baka! read the langs codes!😑",
              reply_markup=InlineKeyboardMarkup(LANG_CODE))
              return
-        text = m.text.split(None, 1)[1]
-        if reply:
+       text = m.text.split(None, 1)[1]
+       if reply:
            if text.endswith("bn"):
                await m.reply_text(TRUTH_STRING.format(name1,name2,Bengali,name2))
                return
