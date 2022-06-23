@@ -46,7 +46,7 @@ LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="")]]
     
 TRUTH_STRING = """ ~~ ** Hey! {} ~~**
 {} give you a Truth! ~ 😳
-~~ **Here the truth:~~ ** **{}** 😈
+~~**Here the truth**~~: **{}** 😈
 ~~ **Now tell the truth to** ~~: **{}**! 😰
 """
 
@@ -70,14 +70,24 @@ async def truth(_, m):
        text = m.text.split(None, 1)[1]
        if reply:
            if text.endswith("bn"):
-               await m.reply_text(TRUTH_STRING.format(name1,name2,Bengali,name2))
+               await reply.reply_text(TRUTH_STRING.format(name1,name2,Bengali,name2))
                return
            if text.endswith("de"):
-               await m.reply_text(TRUTH_STRING.format(name1,name2,German,name2))
+               await reply.reply_text(TRUTH_STRING.format(name1,name2,German,name2))
                return
            if text.endswith("es"):
-               await m.reply_text(TRUTH_STRING.format(name1,name2,Spanish,name2))
+               await reply.reply_text(TRUTH_STRING.format(name1,name2,Spanish,name2))
+               return
+           if text.endswith("fr"):
+               await reply.reply_text(TRUTH_STRING.format(name1,name2,French,name2))
+               return
+           if text.endswith("hi"):
+               await reply.reply_text(TRUTH_STRING.format(name1,name2,Hindi,name2))
+               return
+           if text.endswith("tl"):
+               await reply.reply_text(TRUTH_STRING.format(name1,name2,Tagalog,name2))
                
+            
                                   
                                   
                                   
