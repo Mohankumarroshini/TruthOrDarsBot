@@ -43,7 +43,8 @@ async def start(_, m):
     
 LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="lang_codes")]]
     
-    
+IMAGE = "http://telegra.ph/file/c50b1959b61acf73f0a57.jpg"
+
 TRUTH_STRING = """ ~~ ** Hey! {} ~~**
 {} give you a Truth! ~ 😳
 ~~**Here the truth**~~: **{}** 😈
@@ -78,22 +79,22 @@ async def truth(_, m):
        text = m.text.split(None, 1)[1]
        if reply:
            if text.endswith("bn"):
-               await reply.reply_text(TRUTH_STRING.format(name1,name2,Bengali,name2))
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Bengali,name2))
                return
            if text.endswith("de"):
-               await reply.reply_text(TRUTH_STRING.format(name1,name2,German,name2))
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,German,name2))
                return
            if text.endswith("es"):
-               await reply.reply_text(TRUTH_STRING.format(name1,name2,Spanish,name2))
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Spanish,name2))
                return
            if text.endswith("fr"):
-               await reply.reply_text(TRUTH_STRING.format(name1,name2,French,name2))
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,French,name2))
                return
            if text.endswith("hi"):
-               await reply.reply_text(TRUTH_STRING.format(name1,name2,Hindi,name2))
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Hindi,name2))
                return
            if text.endswith("tl"):
-               await reply.reply_text(TRUTH_STRING.format(name1,name2,Tagalog,name2))
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Tagalog,name2))
                
 
                                   
