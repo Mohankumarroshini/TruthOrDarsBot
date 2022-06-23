@@ -1,12 +1,12 @@
 {
-    "name": "NekosBestBot",
-    "description": "A Anime Themed Anime React Bot",
-    "logo": "https://telegra.ph/file/895f87f9f8028ecc4b632.jpg",
+    "name": "TruthOrDarsBot",
+    "description": "A Anime Themed TruthOrDrasBot",
+    "logo": "http://telegra.ph/file/d7c0a42db5cbf08dbf3fa.jpg",
     "repository": "https://github.com/ctzfamily/NekoBestBot",
     "keywords": [
         "pyrogrambot",
         "telegram bot",
-        "NekoBestBot"
+        "TruthOrDareBot"
     ],
     "env": {
         "BOT_TOKEN": {
