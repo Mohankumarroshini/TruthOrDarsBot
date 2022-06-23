@@ -41,7 +41,7 @@ async def start(_, m):
        await m.reply_photo(photo=url,caption=PM_START_TEXT.format(m.from_user.mention),
              reply_markup=InlineKeyboardMarkup(buttons))
     
-LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="")]]
+LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="lang_codes")]]
     
     
 TRUTH_STRING = """ ~~ ** Hey! {} ~~**
@@ -50,6 +50,14 @@ TRUTH_STRING = """ ~~ ** Hey! {} ~~**
 ~~ **Now tell the truth to** ~~: **{}**! 😰
 """
 
+CODES = """ **The list of available truth or dare translation codes!**\n
+**Bengali**: `bn`
+**German**: `de`
+**Spanish**: `es`
+**French**: `fr`
+**Hindi**: `hi`
+**Tagalog**: `tl`
+"""
 
 @bot.on_message(filters.command("truth"))
 async def truth(_, m):
@@ -87,9 +95,11 @@ async def truth(_, m):
            if text.endswith("tl"):
                await reply.reply_text(TRUTH_STRING.format(name1,name2,Tagalog,name2))
                
-            
+
                                   
-                                  
+@bot.on_callback_query(filters.regex("lang_codes"))
+async def langs(_, query: Callback_Query):
+        await query.message.edit_caption(CODES)
                                   
                                   
                                   
