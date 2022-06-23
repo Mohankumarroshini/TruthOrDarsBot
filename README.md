@@ -39,9 +39,9 @@ Example:
 
 #### Credits
 
-| <a href="https://github.com/Ctzfamily" target="_blank">**Nandha**</a> | <a href="https://api.truthordarebot.xyz" target="_blank">**NekoBest**</a> | 
+| <a href="https://github.com/Ctzfamily" target="_blank">**Nandha**</a> | <a href="https://api.truthordarebot.xyz" target="_blank">**@TruthOrDarsBot**</a> | 
 | :---: |:---:|
-| [![Aasf](https://avatars.githubusercontent.com/u/89440790?v=4)](https://avatars.githubusercontent.com/u/71401053?s=200&v=4)    | [![Waifu](https://avatars.githubusercontent.com/u/71401053?s=200&v=4)](https://api.truthordarebot.xyz) |
+| [![lol](https://avatars.githubusercontent.com/u/89440790?v=4)](https://avatars.githubusercontent.com/u/71401053?s=200&v=4)    | [![Waifu](https://api.truthordarebot.xyz)](https://api.truthordarebot.xyz) |
 | <a href="https://github.com/Ctzfamily/TruthOrDareBot/commits?author=Ctzfamily" target="_blank">`All Code Of This Bot Is Written By Me ^_^`</a> | <a href="https://api.truthordarebot.xyz" target="_blank">`Base Idea Of Making This Bot`</a>
 
 ## Support
