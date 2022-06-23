@@ -71,13 +71,13 @@ async def truth(_, m):
         text = m.text.split(None, 1)[1]
         if reply:
            if text.endswith("bn"):
-               await m.reply_text(TRUTH_STRING.format(name1,name2,Bengali,name2)
+               await m.reply_text(TRUTH_STRING.format(name1,name2,Bengali,name2))
                return
            if text.endswith("de"):
-               await m.reply_text(TRUTH_STRING.format(name1,name2,German,name2)
+               await m.reply_text(TRUTH_STRING.format(name1,name2,German,name2))
                return
            if text.endswith("es"):
-               await m.reply_text(TRUTH_STRING.format(name1,name2,Spanish,name2)
+               await m.reply_text(TRUTH_STRING.format(name1,name2,Spanish,name2))
                
                                   
                                   
