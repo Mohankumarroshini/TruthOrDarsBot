@@ -24,6 +24,7 @@ python3 -m main
 ```
 The list of available truth or dare translation codes!
 
+English: en
 Bengali: bn
 German: de
 Spanish: es
