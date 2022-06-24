@@ -2,7 +2,7 @@
   <img src="http://telegra.ph/file/d7c0a42db5cbf08dbf3fa.jpg" alt="Truthordare">
 </p>
 <h1 align="center">
-  ╔═━「<b><a href="https://t.me/telltruthordarsbot">@TruthOrDarsBot </a></b>」
+  ╔═━「<b><a href="https://t.me/truthordarsbot">@TruthOrDarsBot </a></b>」
 </h1>
 
 ## Deploy
