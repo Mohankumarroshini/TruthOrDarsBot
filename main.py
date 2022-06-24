@@ -151,7 +151,7 @@ async def truth(_, m):
            if text.endswith("ta"):
                await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Tamil,name2))
                return 
-          if text.endswith("en"):
+           if text.endswith("en"):
                await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,English,name2))
           
         
