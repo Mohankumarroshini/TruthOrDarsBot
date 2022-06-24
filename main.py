@@ -30,16 +30,39 @@ buttons = [[
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES}")]]
 
 PM_START_TEXT = """
-**Welcome** {}~ kun 😈
-`I'm A Truth or Dare Telegram Bot! `
-**Make Your Groups Active By Adding Me There! ××**
+**Hey~ {}
+ I'm A TruthOrDare Telegram Bot ~
+ below check the help button to know my commands! × ×**
 """
 
 @bot.on_message(filters.command(["start","help"]))
 async def start(_, m):
        url = "http://telegra.ph/file/c50b1959b61acf73f0a57.jpg"
-       await m.reply_photo(photo=url,caption=PM_START_TEXT.format(m.from_user.mention),
+       await m.reply_photo(photo=url,caption=PM_START_TEXT.format(m.from_user.first_name),
              reply_markup=InlineKeyboardMarkup(buttons))
+
+ABOUT_TEXT = """
+**Hello Dear Users!**
+`I'm A TruthOrDare Telegram Bot`
+`having multi language`
+`using api system`
+
+My Pyroversion: {}
+My updates : [Nandhabots](https://t.me/nandhabots)
+My support : [NandhaSupport](https://t.me/nandhasupport)
+
+[Source](https://github.com/ctzfamily/truthordarsbot) ✨
+
+My All Credits fosto:
+[Nandha](https://t.me/nandhaxd) 🤗
+"""
+
+@bot.on_callback_query(filters.regex("about_back"))
+async def about(_, query: CallbackQuery):
+           query = query.message
+           await query.edit_caption(ABOUT_TEXT.format(pyro),
+             reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help_back")]]))
     
 LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="help_back")]]
     
@@ -228,7 +251,8 @@ async def dare(_, m):
                await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,Tamil,name2))
                
  
-CLOSE = [[InlineKeyboardButton("Close Message!", callback_data="close")]]
+CLOSE = [[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
+                    InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about_back")]]
     
 @bot.on_callback_query(filters.regex("help_back"))
 async def helpback(_, query: CallbackQuery):
