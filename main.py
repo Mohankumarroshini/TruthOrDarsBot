@@ -113,6 +113,7 @@ ta_truth = ("நீங்கள் யாரையாவது பேசுப�
 async def truth(_, m):
        reply = m.reply_to_message
        API = requests.get("https://api.truthordarebot.xyz/v1/truth").json()
+       English = API["question"]
        Bengali = API["translations"]["bn"]
        German = API["translations"]["de"]
        Spanish = API["translations"]["es"]
@@ -148,6 +149,9 @@ async def truth(_, m):
                return 
            if text.endswith("ta"):
                await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,Tamil,name2))
+               return 
+          if text.endswith("en"):
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,English,name2))
           
         
 
@@ -214,6 +218,7 @@ DARE_STRING = """ ~~ ** Hey! {} ~~**
 async def dare(_, m):
        reply = m.reply_to_message
        API = requests.get("https://api.truthordarebot.xyz/v1/dare").json()
+       English = API["question"]
        Bengali = API["translations"]["bn"]
        German = API["translations"]["de"]
        Spanish = API["translations"]["es"]
@@ -249,7 +254,10 @@ async def dare(_, m):
                return 
            if text.endswith("ta"):
                await reply.reply_photo(IMAGE,caption=DARE_STRING.format(name1,name2,Tamil,name2))
-               
+               return
+           if text.endswith("en"):
+               await reply.reply_photo(IMAGE,caption=TRUTH_STRING.format(name1,name2,English,name2))
+          
  
 CLOSE = [[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close"),
                     InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about_back")]]
