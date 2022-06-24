@@ -75,6 +75,7 @@ TRUTH_STRING = """ ~~ ** Hey! {} ~~**
 """
 
 CODES = """ **The list of available truth or dare translation codes!**\n
+**English**: `en`
 **Bengali**: `bn`
 **German**: `de`
 **Spanish**: `es`
