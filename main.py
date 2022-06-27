@@ -30,31 +30,29 @@ buttons = [[
             InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES}")]]
 
 PM_START_TEXT = """
-**Hey~ {}
- I'm A TruthOrDare Telegram Bot ~
- below check the help button to know my commands! × ×**
+**ʜᴇʏ~ {}
+ ɪ'ᴍ ᴀ ᴛʀᴜᴛʜᴏʀᴅᴀʀᴇ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ~
+ ʙᴇʟᴏᴡ ᴄʜᴇᴄᴋ ᴛʜᴇ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴋɴᴏᴡ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs! × ×**
 """
 
 @bot.on_message(filters.command(["start","help"]))
 async def start(_, m):
-       url = "http://telegra.ph/file/c50b1959b61acf73f0a57.jpg"
+       url = "https://telegra.ph/file/ce4fa9c519495a18ac6ab.jpg"
        await m.reply_photo(photo=url,caption=PM_START_TEXT.format(m.from_user.first_name),
              reply_markup=InlineKeyboardMarkup(buttons))
 
 ABOUT_TEXT = """
-**Hello Dear Users!**
-`I'm A TruthOrDare Telegram Bot`
-`having multi language`
-`using api system`
+**ʜᴇʟʟᴏ ᴅᴇᴀʀ ᴜsᴇʀs!**
+`ɪ'ᴍ ᴀ ᴛʀᴜᴛʜᴏʀᴅᴀʀᴇ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ`
+`ʜᴀᴠɪɴɢ ᴍᴜʟᴛɪ ʟᴀɴɢᴜᴀɢᴇ`
+`ᴜsɪɴɢ ᴀᴘɪ sʏsᴛᴇᴍ`
 
-My Pyroversion: {}
-My updates : [Nandhabots](https://t.me/nandhabots)
-My support : [NandhaSupport](https://t.me/nandhasupport)
+ᴍʏ ᴘʏʀᴏᴠᴇʀsɪᴏɴ: {}
+ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ: [ᴛᴀᴍɪʟʙᴏᴛs](https://t.me/tamilbots)
+sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ: [ᴛᴀᴍɪʟsᴜᴘᴘᴏʀᴛ](https://t.me/tamilsupport)
 
-[Source](https://github.com/ctzfamily/truthordarsbot) ✨
-
-My All Credits fosto:
-[Nandha](https://t.me/nandhaxd) 🤗
+ᴀʟʟ ᴍʏ ᴄʀᴇᴅɪᴛs ɢᴏsᴛᴏ:
+[ᴍsᴅ](https://t.me/my_dear_lightbright) 🤗
 """
 
 @bot.on_callback_query(filters.regex("about_back"))
@@ -66,7 +64,7 @@ async def about(_, query: CallbackQuery):
     
 LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="help_back")]]
     
-IMAGE = "http://telegra.ph/file/c50b1959b61acf73f0a57.jpg"
+IMAGE = "https://telegra.ph/file/5a24612aa552df19d65c4.jpg"
 
 TRUTH_STRING = """ ~~ ** Hey! {} ~~**
 {} give you a Truth! ~ 😳
@@ -88,7 +86,7 @@ Example:
 - /truth ta: reply to someone!
 - /dare ta: reply to someone!
 
-[SUPPORT](t.me/nandhaSupport) | [UPDATES](t.me/nandhabots)
+[SUPPORT](t.me/tamilSupport) | [UPDATES](t.me/tamilbots)
 """
 ta_truth = ("நீங்கள் யாரையாவது பேசுபவரா? "
      "உங்கள் பெற்றோர்கள் 'அதை' செய்வதை நீங்கள் எப்போதாவது நடந்திருக்கிறீர்களா?",
