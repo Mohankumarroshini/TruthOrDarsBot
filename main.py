@@ -62,31 +62,31 @@ async def about(_, query: CallbackQuery):
              reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="help_back")]]))
     
-LANG_CODE = [[InlineKeyboardButton("Lang Codes!", callback_data="help_back")]]
+LANG_CODE = [[InlineKeyboardButton("ʟᴀɴɢ ᴄᴏᴅᴇ!", callback_data="help_back")]]
     
 IMAGE = "https://telegra.ph/file/5a24612aa552df19d65c4.jpg"
 
-TRUTH_STRING = """ ~~ ** Hey! {} ~~**
-{} give you a Truth! ~ 😳
-~~**Here the truth**~~: **{}** 😈
-~~ **Now tell the truth to** ~~: **{}**! 😰
+TRUTH_STRING = """ ~~ ** ʜᴇʏ! {} ~~**
+{} ɢɪʙᴇ ʏᴏᴜ ᴀ ᴛʀᴜᴛʜ! ~ 😳
+~~**ʜᴇʀᴇ ᴛʜᴇ ᴛʀᴜᴛʜ**~~: **{}** 😈
+~~ **ɴᴏᴡ ᴛᴇʟʟ ᴛʜᴇ ᴛʀᴜᴛʜ ᴛᴏ** ~~: **{}**! 😰
 """
 
-CODES = """ **The list of available truth or dare translation codes!**\n
-**English**: `en`
-**Bengali**: `bn`
-**German**: `de`
-**Spanish**: `es`
-**French**: `fr`
-**Hindi**: `hi`
-**Tagalog**: `tl`
-**Tamil**: `ta`
+CODES = """ **ᴛʜᴇ ʟɪsᴛ ᴏғ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛʀᴜᴛʜ ᴏʀ ᴅᴀʀᴇ ᴛʀᴀɴsʟᴀᴛɪᴏɴ ᴄᴏᴅᴇs!**\n
+**ᴇɴɢʟɪsʜ**: `en`
+**ʙᴇɴɢᴀʟɪ**: `bn`
+**ɢᴇʀᴍᴀᴍ**: `de`
+**sᴘᴀɴɪsʜ**: `es`
+**ғʀᴇɴᴄʜ**: `fr`
+**ʜɪɴᴅɪ**: `hi`
+**ᴛᴀɢᴀʟᴏɢ**: `tl`
+**ᴛᴀᴍɪʟ**: `ta`
 
 Example: 
-- /truth ta: reply to someone!
-- /dare ta: reply to someone!
+- /truth ta: ʀᴇᴘʟʏ ᴛᴏ sᴏᴍᴇᴏɴᴇ!
+- /dare ta: ʀᴇᴘʟʏ ᴛᴏ sᴏᴍᴇᴏɴᴇ!
 
-[SUPPORT](t.me/tamilSupport) | [UPDATES](t.me/tamilbots)
+[𝐬𝐮𝐩𝐩𝐨𝐫𝐭](t.me/tamilSupport) | [𝐮𝐩𝐝𝐚𝐭𝐞𝐬](t.me/tamilbots)
 """
 ta_truth = ("நீங்கள் யாரையாவது பேசுபவரா? "
      "உங்கள் பெற்றோர்கள் 'அதை' செய்வதை நீங்கள் எப்போதாவது நடந்திருக்கிறீர்களா?",
@@ -121,7 +121,7 @@ async def truth(_, m):
        Tagalog = API["translations"]["tl"]
        Tamil = random.choice(ta_truth)
        if len(m.command) < 2:
-             await m.reply_photo(IMAGE,caption="baka! read the langs codes!😑",
+             await m.reply_photo(IMAGE,caption="ʙᴀᴋᴀ! ʀᴇᴀᴅ ᴛʜᴇ ʟᴀɴɢ ᴄᴏᴅᴇ!😑",
              reply_markup=InlineKeyboardMarkup(LANG_CODE))
              return
        text = m.text.split(None, 1)[1]
@@ -207,10 +207,10 @@ ta_dare = (
     "உங்கள் கிரஷின் படத்தை உங்கள் டிபியாக அமைக்கவும்.",
     "எனக்கு அதிக தைரியத்தை பரிந்துரைக்கவும்.")
 
-DARE_STRING = """ ~~ ** Hey! {} ~~**
-{} give you a Dare! ~ 😳
-~~**Here the truth**~~: **{}** 😈
-~~ **Now do the dare!** ~~ **{}**! 😰
+DARE_STRING = """ ~~ ** ʜᴇʏ! {} ~~**
+{} ɢᴀᴠᴇ ʏᴏᴜ ᴀ ᴅᴀʀᴇ! ~ 😳
+~~**ʜᴇʀᴇ ɪs ᴛʜᴇ ᴛʀᴜᴛʜ**~~: **{}** 😈
+~~ **ɴᴏᴡ ᴅᴏ ᴛʜᴇ ᴅᴀʀᴇ!** ~~ **{}**! 😰
 """
 
 @bot.on_message(filters.command("dare"))            
@@ -226,7 +226,7 @@ async def dare(_, m):
        Tagalog = API["translations"]["tl"]
        Tamil = random.choice(ta_dare)
        if len(m.command) < 2:
-           await m.reply_photo(IMAGE,caption="baka! read the langs codes!😑",
+           await m.reply_photo(IMAGE,caption="ʙᴀᴋᴀ! ʀᴇᴀᴅ ᴛʜᴇ ʟᴀɴɢs ᴄᴏᴅᴇ!😑",
            reply_markup=InlineKeyboardMarkup(LANG_CODE))
            return
        text = m.text.split(None, 1)[1]
